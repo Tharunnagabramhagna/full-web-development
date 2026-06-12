@@ -1,0 +1,220 @@
+<!--Page layout techinques => semantic and non-semantic -->
+<!-- semantic : header,main,footer-->
+<!-- non-semantic : div,span -->
+<!-- 1) header => starting part of the webpage -->
+<!-- 2) main => body of the webpage --> 
+<!-- main: Section, Article and Aside -->  
+<!-- 3) footer => the last part of the webpage --> 
+<!-- div tag => container to store other HTML elements (takes box space) --> 
+<!-- span tag => takes reuired amount of space in the webpage--> 
+<!-- Anchor tag => attributes : target (for opening the image in new tab),
+img src(clickable pic) -->
+<!-- Lists in HTML : unordered, ordered -->
+<!-- unordered List => list with bullet points -->
+<!-- ordered List => list with numbers (or) roman number (or) alphabets -->
+<!-- Tables in HTML : tr, td, th, captions, thead, tbody -->
+<!-- Tables => displays data in the form of a table -->
+<!-- Forms in HTML => collects data from the user (E.g:- sign up, login, etc..) -->
+<!-- Action attribute in Forms => sends data to user assigned forms -->
+<!-- input tag (Form Element) => takes input form the user that appears in box form -->
+<!-- Label in HTML => creates options to select even if user clicks on text -->
+<!-- Labels are widely used in radio type buttons -->
+<!-- Class and Id : class => a group of id (E.g.classrom) ; Id => indiviual tag (E.g.student in class)-->
+<!-- Select tag => used to create a set of options of dropdown --> 
+<!-- iframe tag => used for importing a page from another website --> 
+<!-- Video tag => shows videos with a link on your webpage --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Document</title>
+</head>
+<body>
+    <!-- Example of a Portfoilo Structure -->
+    <header>
+        <h1>My Portfoilo</h1>
+    </header>
+    <main>
+        <!-- it is used to describe our education, experiences, etc.. -->
+        <section>Education : School (Vasishtha school) | B-Tech (SRM AP) </section>
+        <section>Experience : Google | IIT hyderabad internship</section>
+        <!-- it is used to describe our hobby, goal, story, etc.. -->
+        <a href="https://meet.google.com" target="_main">Google meet</a>
+        <br>
+        <a href="https://chatgpt.com" target="_main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAg3xcjdit6zCQkKkKtSEpbyuFovp2FnN6AA&s" height="90"/></a>
+        <br>
+        <a href="https://github.com"><img src="https://cdn.iconscout.com/icon/free/png-256/free-github-logo-icon-svg-download-png-8630395.png?f=webp" width="120"/></a>
+        <br>
+        <aside> This is an ad</aside> <!-- it displays ad at the end of main -->
+        <!-- Block Element -->
+        <div>
+            <p>Hi</p>
+            <p>Namaste</p>
+            <p>Konichiwa</p>
+        </div>
+        <div>
+            <p>bye</p>
+            <p>Alvida</p>
+            <p>Jaa ne</p>
+        </div>
+        <span>This is a text in span</span>
+    </main>
+    <footer>
+        <h3>contact me at tharunnagabramhagna@gmail.com</h3>
+    </footer>
+    <hr>
+    <h2>Lists is HTML</h2>
+    <h4>unordered list - A list of fruits</h4>
+    <ul>
+      <li>Apple</li> 
+        <!-- sub-list -->
+        <ul>
+            <li>color : red</li>
+            <li>season : winter</li>
+        </ul>
+      <li>Mango</li>  
+        <ul>
+            <li>color : yellow</li>
+            <li>season : summer</li>
+        </ul>
+      <li>Banana</li> 
+        <ul>
+            <li>color : white</li>
+            <li>season : year-round</li>
+        </ul>
+      <li>Grapes</li> 
+        <ul>
+            <li>color : green</li>
+            <li>season : summer</li>
+        </ul>
+    </ul>
+    <h4>ordered list - A list of smartphone brands</h4>
+    <ol>
+        <li>Xiaomi</li>
+            <ol type="i">
+                <li>Net worth : 86 billion</li>
+            </ol>
+        <li>Realme</li>
+            <ol type="i">
+                <li value="2">Net worth : 6 billion</li>
+            </ol>
+        <li>Infinix</li>
+            <ol type="i">
+                <li value="3">Net worth : 1 billion</li>
+            </ol>
+        <li>Samsung</li>
+            <ol type="i">
+                <li value="4">Net worth : 400 billion</li>
+            </ol>
+    </ol>
+    <hr>
+    <h2>Tables in HTML</h2>
+    <table>
+        <!-- caption of the table -->
+        <caption>
+            Student Info
+        </caption>
+        <!-- stores heading data -->
+        <thead>
+            <!-- it is used for table rows -->
+            <tr>
+                <!-- used in single header cases -->
+                <th colspan="3">
+                    HOSTEL STUDENTS
+                </th>
+            </tr>
+            <tr>
+                <!-- it is used for table headers -->
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>cgpa</th>
+            </tr>
+        </thead>
+        <!-- stores body of the table info -->
+        <tbody>
+            <tr>
+                <!-- it is used for table data -->
+                <td>Tharun</td>
+                <td>699</td>
+                <td>9.10</td>
+            </tr>
+            <tr>
+                <td>Tony</td>
+                <td>3000</td>
+                <td>10.00</td>
+            </tr>
+            <tr>
+                <td>Thor</td>
+                <td>700</td>
+                <td>7.82</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <!-- action.php is just an example -->
+    <h2>Forms in HTML</h2>
+    <h4>University Application</h4>
+    <h4>Login page</h4>
+    <form action="/action.php">
+        <input type="text" placeholder="Enter your username">
+        <br><br>
+        <input type="password" placeholder="Enter the password">
+        <br><br>
+        <i>Select your class : </i>
+        <br>
+        <label for="101">
+            <input type="radio" value="classXI" name="class" id="101">ClassXI
+        </label>
+        <label for="102">
+            <input type="radio" value="classXII" name="class" id="102">ClassXII
+        </label>
+        <br><br>
+        <i>Select your favourite subject : </i>
+        <br>
+        <label for="1">
+            <!-- using for selecting multiple things -->
+            <input type="checkbox" value="linear algebra" name="class" id="1">linear algebra
+        </label>
+        <br>
+        <label for="2">
+            <input type="checkbox" value="Oops with C++" name="class" id="2">Oops with C++
+        </label>
+        <br>
+        <label for="3">
+            <input type="checkbox" value="Java" name="class" id="3">Java
+        </label>
+        <br>
+        <label for="4">
+            <input type="checkbox" value="DSA" name="class" id="4">DSA
+        </label>
+        <br><br>
+        Select your city :
+        <select name="City" id="City">
+            <option value="Banglore">Banglore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Mumbai">Mumbai</option>
+        </select>
+        <h4>Feedback form</h4>
+        <!-- a block of space to write somthing -->
+        <textarea name="Feedback" id="1010" placeholder="Please provide your feedback" rows="5" cols="50"></textarea>
+        <br>
+        <input type="submit" name="submit">
+    </form>
+    <br><br>
+    <hr>
+    <h3>Wikipedia website</h3>
+    <iframe width="1200" height="560" src="https://www.wikipedia.org/" frameborder="150"></iframe>
+    <br><br>
+    <hr>
+    <h3>Ultimate Wild Animals Collection in 8K ULTRA HD </h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Zv11L-ZfrSg?si=39GTl9macO8pyRIY" title="YouTube video player" frameborder="150" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br><br>
+    <hr>
+    <video width="560" height="315" src="/HTML/Screen Recording 2026-02-14 204244.mp4" controls loop autoplay></video>
+    <br>
+</body>
+</html>
