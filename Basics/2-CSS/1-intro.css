@@ -1,0 +1,109 @@
+/* 
+    CSS => Cascading Style Sheets
+    Definition : It is a language that is used to describe the style of a document.
+    i)There are three types of CSS:
+        1) Inline CSS
+        2) Style tag CSS
+        3) External Stylesheet
+    ii) This files is third type from the above matter
+    iii) Syntax of external stylesheet:
+        selector {
+            Property : value
+        }
+    iv) Priority order : Browser Styles < External < Style tag < Inline
+    v) Color Property : used to set the 'color of foreground' (Painting the frontend elements)
+    vi) Background Color Property : used to set the 'color of Background'
+    vii) Color Systems : i) RGB (Red green blue)  ii) HEX [colors range - 0 to 255]
+    viii) HEX Color System : HEX => 16 digits => 0-9 digits ; A-F alphabets
+            e.g :- RED - ff(red) 00(green) 00(blue) => ff0000
+    ix) Types of Selectors :
+            1) Universal Selector : Sets same property for the whole document
+            2) Element Selector
+            3) Id Selector
+            4) Class Selector
+*/
+
+* {
+    padding: 1px;
+    color: red; /* Changes applies only until this part */
+}
+
+h4 {
+    color: olive;
+}
+
+button {
+    color:coral
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.687); /* Example of RGB System */
+    /* body can't show color */
+    color: #34eba1; /* random choice from color picker */
+}
+
+pre {
+    background-color: rgb(255, 0, 0); /* Red Color */
+    color: #00ff00;
+}
+
+h2 {
+    background-color: rgb(0, 255, 0);
+}
+
+h4 {
+    background-color: rgb(0, 0, 255);
+    color: #ffff00; /* yellow */
+}
+
+h1 {
+    background-color: rgb(255, 255, 0); /* yellow */
+}
+
+h3 {
+    background-color: rgb(0, 255, 255); /* aqua */
+}
+
+small {
+    background-color: rgb(200, 255, 0); /* Greenish yellow */
+    color: #ff0000;
+}
+
+h5 {
+    background-color: rgb(255, 200, 0); /* light orange */
+    color: #0000ff;
+}
+
+button {
+    background-color: aqua;
+}
+
+p {
+    color: hotpink;
+    background-color: black;
+}
+
+#head1 {
+    background-color: darkslategrey;
+    color: magenta; /* rgb(255,0,255) */
+}
+
+#head2 {
+    background-color: blanchedalmond;
+    color: chocolate;
+}
+
+#head3 {
+    background-color: goldenrod;
+    color: darkgreen;
+}
+
+.myClass {
+    background-color: navy;
+    color: crimson;
+}
+
+h1 {
+    color: red; /* Example for priority order */
+}
+
