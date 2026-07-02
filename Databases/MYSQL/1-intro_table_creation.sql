@@ -15,7 +15,7 @@ USE college;
 CREATE TABLE student (
 	id INT PRIMARY KEY, -- PRIMARY KEY => helps to carry unique data and constraints null values
     name VARCHAR(50), -- VARCHAR => uses required memory (not memory waste)
-    age INT NOT NULL -- NOT NULL => constraints null values
+    age INT NOT NULL -- NOT NULL => we need to store any value for sure in it
 );
 
 INSERT INTO student VALUES(1, "THARUN", 18); -- INSERT values to table
@@ -29,10 +29,11 @@ SHOW TABLES; -- displays all the available tables
 
 CREATE TABLE teacher (
 	teacherID INT PRIMARY KEY,
-    name VARCHAR(50)
+    name VARCHAR(50),
+    AadharId DOUBLE UNIQUE
 );
 
-INSERT INTO teacher(teacherID, name) VALUES(10, "Manoj"),(20, "Bhavitaa");
+INSERT INTO teacher(teacherID, name, AadharId) VALUES(10, "Manoj", 2161),(20, "Bhavitaa", 8384);
 
 SHOW TABLES;
 
@@ -51,3 +52,65 @@ DROP TABLE teacher;
 
 SHOW DATABASES; -- displays all the available databases
 
+/* Practice Question-1
+	Create a database for your company named XYZ.
+    step-1 : create a table inside this DB to store employee info (id, name and salary)
+    step-2 : Add following information in the DB:
+				1, "adam", 25000
+                2, "bob", 30000
+                3, "casey", 40000
+	step-3 : Select & view all your table data.
+*/
+
+CREATE DATABASE XYZ;
+
+USE XYZ;
+
+CREATE TABLE employee(
+	Id INT,
+	PRIMARY KEY (Id),
+    name VARCHAR(50),
+    salary DOUBLE NOT NULL
+);
+
+INSERT INTO employee VALUES(1, "adam", 25000),(2, "bob", 30000), (3, "casey", 40000);
+
+SELECT * FROM employee;
+
+DROP DATABASE XYZ;
+
+CREATE TABLE classMembers (
+	Id INT,
+    -- FOREIGN KEY (Id) references student(id), -- Example for a foreign key
+    course VARCHAR(50),
+	PRIMARY KEY (Id, course), -- pair of primary key => allows unique combinations only
+    classId INT UNIQUE,
+    age INT CHECK (age >= 18), -- Check constraint
+    fee DOUBLE DEFAULT 41000 -- default => helps we user entry nothing
+);
+
+INSERT INTO classMembers(Id,course,classId,age) 
+VALUES(81,"CSE",2,18),
+(82,"ECE",1,19),
+(84,"CIVIL",3,20);
+
+SELECT * FROM classMembers;
+
+CREATE DATABASE state;
+
+USE state;
+
+CREATE TABLE cityEntry(
+	id INT PRIMARY KEY,
+    name VARCHAR(50),
+    city VARCHAR(100),
+    age INT,
+    constraint age_check CHECK (age >= 18 and city = "Vijayawada") 
+    -- constriant check (We can ignore writing 'age_check' it's just a variable)
+);
+
+INSERT INTO cityEntry
+VALUES(1, "Kiran", "Vijayawada", 29),
+(2, "Abhi", "Vijayawada", 25);
+
+SELECT * FROM cityEntry;
