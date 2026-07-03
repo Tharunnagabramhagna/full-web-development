@@ -1,76 +1,67 @@
-# MySQL
+<div align="center">
 
-This folder contains my **MySQL learning journey** as part of my **Web Development Fundamentals** repository.
+# 🗄️ MySQL
 
-## 📚 Topics Covered
+*From `CREATE DATABASE` to grouped aggregate queries.*
 
-* Introduction to Databases
-* Installing MySQL
-* Creating Databases
-* Creating Tables
-* Data Types
-* Constraints
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Status](https://img.shields.io/badge/status-in%20progress-yellow?style=for-the-badge)
 
-  * PRIMARY KEY
-  * FOREIGN KEY
-  * UNIQUE
-  * NOT NULL
-  * DEFAULT
-  * AUTO_INCREMENT
-* CRUD Operations
+</div>
 
-  * CREATE
-  * READ
-  * UPDATE
-  * DELETE
-* Filtering Data (`WHERE`)
-* Sorting (`ORDER BY`)
-* Limiting Results (`LIMIT`)
-* Aggregate Functions
+---
 
-  * COUNT()
-  * SUM()
-  * AVG()
-  * MIN()
-  * MAX()
-* Grouping (`GROUP BY`)
-* Filtering Groups (`HAVING`)
-* Joins
+## 📖 Overview
 
-  * INNER JOIN
-  * LEFT JOIN
-  * RIGHT JOIN
-  * FULL JOIN (Concept)
-* Subqueries
-* Views
-* Indexes
-* Stored Procedures
-* Triggers
-* Transactions
-* Practice Queries
+This folder documents my MySQL fundamentals as part of the [Full Web Development](../../README.md) repository — schema design and core querying are covered; joins and beyond are next.
+
+---
+
+## ✅ Topics Covered
+
+**Database & Table Basics**
+- Creating / dropping databases (`CREATE DATABASE`, `IF NOT EXISTS`, `DROP DATABASE`)
+- Creating tables with data types
+- Constraints: `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`, `DEFAULT`, `AUTO_INCREMENT`
+- SQL command categories: DDL, DQL, DML, DCL, TCL
+
+**CRUD & Querying**
+- `INSERT`, `SELECT`, `UPDATE`, `DELETE`, `ALTER`
+- Filtering with `WHERE` and comparison/logical operators
+- Sorting with `ORDER BY` (ascending/descending)
+- Limiting results with `LIMIT`
+- Aggregate functions: `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`
+- Grouping with `GROUP BY`
+- Filtering groups with `HAVING`
+- Foreign key relationships and viewing EER diagrams
+
+---
 
 ## 📂 Folder Structure
 
 ```text
-mysql/
+MYSQL/
 ├── README.md
-├── practice/
-└── *.sql
+├── 1-intro_table_creation.sql   # DB/table creation, constraints, CRUD
+└── 2-types_of_clauses.sql       # WHERE, ORDER BY, LIMIT, aggregates, GROUP BY/HAVING
 ```
-
-## 🎯 Goal
-
-This folder serves as my personal reference for learning MySQL from the fundamentals to more advanced concepts. It includes SQL scripts and practice queries created while learning.
-
-## 🛠️ Tech Stack
-
-* MySQL
-* SQL
-
-## 🚀 Status
-
-Currently learning and regularly updating this folder with new concepts, practice exercises, and projects.
 
 ---
 
-⭐ If you find this repository helpful, feel free to star it!
+## 🗺️ Not Yet Covered
+
+These are planned next, in order:
+
+- [ ] Joins: `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN` (concept)
+- [ ] Subqueries
+- [ ] Views
+- [ ] Indexes
+- [ ] Stored procedures
+- [ ] Triggers
+- [ ] Transactions
+
+*(The main repository README previously listed joins and beyond as complete — that was inaccurate and has been corrected here to reflect the actual code.)*
+
+---
+
+⭐ Part of the [Full Web Development](../../README.md) learning repository.
