@@ -243,9 +243,7 @@ WHERE marks < 30; -- removed John
 
 SELECT * FROM student;
 
--- 3) alter (to change the schema)
-
-
+-- continued in next file
 
 -- FOREIGN key
 
