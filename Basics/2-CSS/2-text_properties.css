@@ -1,0 +1,186 @@
+/* Practice Question - 1
+    a. Create a simple dev with a id "box"
+       Add some text content inside the div.
+       Set it's background color to blue.
+    b. Create 3 headings with h1,h2 & h3.
+       Give them all a class "heading" & set color of "heading" to red.
+    c. Create a button & set its background color to:
+        i) green using css stylesheet
+        ii) blue using <style> tag
+        iii) pink using inline style
+*/
+
+/* a) as it's a paragraph color of paragraph is appiled too */
+#box {
+    background-color: blue; 
+}
+
+/* b)  */
+.heading {
+    color: red;
+}
+/* (or)  another method (not in question) */
+/* h1,h2,h3 {
+    color: red;
+} */
+
+button {
+    background-color: green;
+}
+
+/* 
+    Text Properties :
+        i) text align : left/center/right/start/end
+        ii) text decoration : underline/overline/line-through
+        iii) font-weight : normal/bold/bolder/lighter/100-900
+        iv) font-family : arial / araial,roboto / etc...
+            font-family types => Generic, Specific
+            Generic font-family : serif, sans-serif, cursive, Fantasy, Monospace
+            Ex : arial is sans-serif, Times New Roman is serif
+        v) line-height : modifies space taken by each line 
+        vi) Text transform : uppercase/lowercase/capitalize/none 
+    Units in CSS :
+        i) Types : Absolute , Relative
+        ii) Absolute : pixel => 96 pixels = 1 inch = 2.54 cm (Ex : font-size : 20px)
+
+*/
+
+#para1 {
+    text-align: left;
+    text-decoration: underline;
+}
+
+#para2 {
+    text-align: center;
+    text-decoration: overline;
+    text-decoration-style: dashed;
+}
+
+#para3 {
+    text-align: right;
+    text-decoration: line-through;
+}
+
+#paraHead3 {
+    text-align: center;
+    /* Refer MDN for more info of Web dev */
+    text-decoration: coral wavy underline;
+}
+
+#paraHead2 {
+    text-align: start; /* start => left */
+    text-decoration: purple underline;
+    text-decoration-style: dotted;
+}
+
+#paraHead1 {
+    text-align: end; /* end => right */
+    text-decoration: greenyellow underline;
+    text-decoration-style: double;
+}
+
+a {
+    text-decoration: none; /* best use of text-decoration property */
+    font-weight: 100;
+}
+
+#head1 {
+    font-weight: bolder;
+}
+ 
+#head2 {
+    font-weight: bold; /* default by css */
+}
+
+#head3 {
+    font-weight: lighter;
+}
+
+#head4 {
+    font-weight: 300;
+}
+
+#head5 {
+    font-weight: 500;
+}
+
+#head6 {
+    font-weight: 900;
+}
+
+#para4 {
+    text-align: center;
+    font-family: arial;
+}
+
+#para5 {
+    text-align: center;
+    /* multiple font styles for multiple browsers */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Para1 {
+    font-size: 25px;
+}
+
+#Para2 {
+    font-size: 10px;
+}
+
+#Para3 {
+    line-height: 40px;
+}
+
+#Para4 {
+    line-height: normal;
+}
+
+#Para5 {
+    text-transform: uppercase;
+}
+
+#Para6 {
+    text-transform: lowercase;
+}
+
+#Para7 {
+    text-transform: capitalize;
+}
+
+#Para8 {
+    text-transform: uppercase;
+    /* Removes the text transforms */
+    text-transform: none;
+}
+
+/* Practice set-2 :
+    a) Create a heading centered on the page with all it's text capitalized by default.
+    b) Set the font family of all the content in the document to "Times New Roman".
+    c) Create one div inside another div.
+        Set id & text "outer" for the first one & "inner" for the second one.
+        Set the outer div text size to 25px & inner div text size to 10px.
+*/
+
+/* a) */
+
+#Head1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* b) */
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* c) */ 
+#box1 {
+    text-align: center; /* my addings */
+    font-size: 25px;
+}
+
+#box2 {
+    text-align: center;  /* my addings */
+    font-size: 10px;
+}
+

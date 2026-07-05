@@ -42,6 +42,11 @@ body {
     color: #34eba1; /* random choice from color picker */
 }
 
+/* Git-hub dark theme color (use if needed) */
+/* body {
+    background-color: #0D1117;
+} */
+
 pre {
     background-color: rgb(255, 0, 0); /* Red Color */
     color: #00ff00;
@@ -106,4 +111,3 @@ p {
 h1 {
     color: red; /* Example for priority order */
 }
-
