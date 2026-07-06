@@ -1,0 +1,35 @@
+/* All developers set there margin and padding to 0 so they can avoid the default 
+margin and padding for some properties. */
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    background-color: lightblue;
+}
+
+/* Practice Question-3:
+    b. Create a amazon navbar from the homepage of old amazon app.
+*/
+
+#navbar {
+    height: 60px;
+    background-color: #0f1111;
+    border: 10px solid white;
+}
+
+#logo {
+    font-size: 25px;
+    color: #f08804;
+}
+
+#searchButton {
+    background-color: #f08804;
+}
+
+a {
+    margin-right: 150px;
+    text-decoration: none;
+}
