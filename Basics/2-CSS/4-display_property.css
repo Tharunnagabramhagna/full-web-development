@@ -1,0 +1,231 @@
+/* All developers set there margin and padding to 0 so they can avoid the default 
+margin and padding for some properties. */
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    background-color: lightblue;
+}
+
+/* Practice Question-3:
+    b. Create a amazon navbar from the homepage of old amazon app.
+*/
+
+#navbar {
+    height: 60px;
+    background-color: #0f1111;
+    border: 10px solid white;
+}
+
+#logo {
+    font-size: 25px;
+    color: #f08804;
+}
+
+#searchButton {
+    background-color: #f08804;
+}
+
+a {
+    margin-right: 150px;
+    text-decoration: none;
+}
+
+/*
+    i) Display Property : inline/block/inline-block/none
+        block : takes 100% width (E.g. h1,div)
+        inline : takes required width (E.g. span, button, input, anchor)
+    ii) Alpha channel : 
+        RGBA => RGBAlpha
+        Alpha is the opacity value between 0 and 1.
+        if opacity is 0 then colors are not visible.
+        if opacity is 1 then colors are clearly visible.
+*/
+
+#box1 {
+    color: black;
+    background-color: red;
+    display: inline;
+}
+
+#click1 {
+    background-color: violet;
+    display: block;
+    /* Reason : small to big width is impossible so we need to resize the width
+    to 100% to see the changes*/
+    width: 100%;
+}
+
+#span1 {
+    color: black;
+    background-color: aquamarine;
+}
+
+#span2 {
+    color: black;
+    background-color: aqua;
+    display: block;
+}
+
+#box2 {
+    background-color: chocolate;
+}
+
+#box3 {
+    background-color: crimson;
+}
+
+#box4 {
+    background-color: wheat;
+}
+
+#box2,#box3,#box4 {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    /* it disables top and bottom margins (Solution : inline-block display) */
+    display: inline;
+}
+
+#box5,#box6,#box7 {
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    padding: 50px;
+    display: inline-block;
+}
+
+#box5 {
+    background-color: salmon;
+}
+
+#box6 {
+    background-color: firebrick;
+}
+
+#box7 {
+    background-color: hotpink;
+}
+
+#box6 {
+    display: none; /* removes the box from display */
+}
+
+#box3 {
+    visibility: hidden; /* just hides the box */
+}
+
+#box8,#box9,#box10 {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+}
+
+#box8 {
+    background-color: rgba(255, 0, 0, 0.25); /* very light red */
+}
+
+#box9 {
+    background-color: rgba(255, 0, 0, 0.50); /* light red */
+}
+
+#box10 {
+    background-color: rgba(255, 0, 0, 1); /* pure red */
+}
+
+#box11,#box12,#box13 {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+}
+
+#box11 {
+    background-color: rgba(0, 255, 0, 0.30); /* very light green */
+}
+
+#box12 {
+    background-color: rgba(0, 255, 0, 0.60); /* light green */
+}
+
+#box13 {
+    background-color: rgba(0, 255, 0, 1); /* pure green */
+}
+
+#box14,#box15,#box16 {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+}
+
+#box14 {
+    background-color: rgba(0, 0, 255, 0.35); /* very light blue */
+}
+
+#box15 {
+    background-color: rgba(0, 0, 255, 0.70); /* light blue */
+}
+
+#box16 {
+    background-color: rgba(0, 0, 255, 1); /* pure blue */
+}
+
+/* Practice question-4 :
+    1Q) Create a webpage layout with a header, a footer and a content area containing
+        3 divs.
+        Set the height and width of divs to 100px.
+        (add the previous navbar in the header)
+    
+    2Q) Add borders to all the divs.
+    3Q) Add a different background color to each div with an opacity of 0.5
+    4Q) Give the content area an appropriate height.
+*/
+
+/* 1Q */
+#navbar1 {
+    height: 60px;
+    margin-left: 2px;
+    background-color: #0f1111;
+}
+
+/* 2Q and 3Q */
+#content1 {
+    background-color: rgba(255, 200, 0, 0.5);
+}
+
+#content2 {
+    background-color: rgba(200, 100, 250, 0.5);
+}
+
+#content3 {
+    background-color: rgba(189, 255, 100, 0.5);
+}
+
+#content1, #content2, #content3 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 100px;
+    padding: 50px;
+}
+
+/* 4Q */
+
+#content {
+    height: 750px;
+}
+
+footer {
+    background-color: #0f1111;
+    text-align: center;
+}
