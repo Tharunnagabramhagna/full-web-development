@@ -1,0 +1,199 @@
+/* 
+    i) Units in CSS => Relative ( They are not same in all websites (or) tags )
+        Types => %, em, rem, vh, vw
+        em : It is basically the number * the parent box property
+        rem : it is set by the font size of the root element
+        vh (viewport height) : It takes required height similar to the screen height
+        vw (viewport width) : It takes reuired width similar to the screen width
+    ii) Position property : static/relative/absolute/fixed/sticky
+        absolute : positions relatived to it's closet positioned ancestor. (removes from the flow)
+        fixed : positioned relative to browser. (removes from the flow)
+    iii) Background image and size : 
+            Syntax of background-image : url("link") 
+            backgorund-size : cover/contain/auto
+*/
+
+#box1 { 
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+#box2 {
+    height: 50px;
+    width: 33%; /* 33 % of 100px = 33px */
+    background-color: coral;
+    margin-left: 20%; /* 20 % of 100px = 20px */
+}
+
+#box3 {
+    height: 100px;
+    width: 200px;
+    background-color: greenyellow;
+    border: 2px solid black;
+}
+
+#box4 {
+    height: 50px;
+    width: 30%; /* 30 % of 200px = 60px */
+    background-color: royalblue;
+    margin-left: 20%; /* 20 % of 100px = 40px */
+}
+
+#Box1 {
+    height: 100px;
+    width: 250px;
+    background-color: blue;
+    border: 2px solid black;
+    font-size: 10px;
+}
+
+#Box2 {
+    height: 50px;
+    background-color: brown;
+    margin-left: 20px;
+    font-size: 2em; /* 10 * 2px = 20px */
+    width: 5em; /* 20px x 5 = 100px */
+}
+
+#box-1 {
+    height: 200px;
+    width: 200px;
+    background-color: darkolivegreen;
+    border: 2px solid black;
+    font-size: 10px;
+}
+
+#box-2 {
+    height: 100px;
+    background-color: gold;
+    /* 16px is the default font size of tags text */
+    font-size: 2rem; /* 16px x 2 = 32px */
+    width: 5rem; /* 16px x 5 = 60px */
+}
+
+#boxvh1 {
+    height: 100px;
+    width: 100px;
+    background-color: khaki;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+#boxvh2 {
+    background-color: blueviolet;
+    width: 2em;
+    height: 12vh; /* E.g. 50vh => half of the screen and 100vh => full screen height */
+}
+
+#boxvw1 {
+    height: 200px;
+    width: 200px;
+    background-color: navy;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+#boxvw2 {
+    height: 100px;
+    background-color: mediumvioletred;
+    width: 50vw;
+}
+
+#boxp1, #boxp2, #boxp3,#boxp4,#boxp5,#boxp6 {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+#boxp1 {
+    position: static;
+    bottom: 20px;
+    top: 10px;
+    z-index: -1;
+}
+
+#boxp2 {
+    /* It makes top, left, right , bottom ,z-index properties work */
+    position: relative;
+    top: 20px;
+}
+
+#boxp3 {
+    /* position of box-3 is changed relative to body tag so box-4 is hidden under box-3 */
+    /* box-4 is hidden because it is written after box-3 */
+    position: absolute;
+    /* moves with respect to body tag */
+    top: 1120px; /* 1100px away from the top of the page (body) */
+    z-index: -1; /* it goes to bottom from top of box-4 */
+}
+
+#boxp4 {
+    z-index: 2; /* it goes to top from bottom of box-3 */
+}
+
+/* USE : fixed and sticky are mostly used for header and footer tags */
+
+#boxp5 {
+    position: fixed; 
+    top: 0; /* it stays on the top of the page even while scrolling. */
+}
+
+#boxp6 {
+    /* Once scroll to test */
+    position: sticky;
+    top: 0; /* box-6 stickes to top after crossing it position while scrolling the page */
+    margin-left: 100px;
+}
+
+#imagebox1,#imagebox2,#imagebox3 {
+    height: 300px;
+    width: 300px;
+    background-color: orange;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#imagebox1 {
+    background-image: url("cat.png");
+    background-size: cover; /* fit the image properly (best choice) */
+}
+
+#imagebox2 {
+    background-image: url("bird.png");
+    background-size: contain; /* Full image fit the div in smaller size */
+    background-repeat: no-repeat; /* disables the repeation of the image */
+}
+
+#imagebox3 {
+    color: chocolate;
+    background-image: url("tiger.png");
+    background-size: auto; /* Default option of background-image property */
+}
+
+/* Practice question-5 :
+    Create the following layout using the given html.
+        i) Give the div height,width & some background image.
+        ii) Use the appropiate position property for the div element
+            to place it at the right end of the page. (The div should not move even on scroll)
+        
+        <p>lorem*5</p>
+        <div>Love Nature</div>
+        <p>lorem*50</p>
+*/
+
+#nature {
+    height: 200px;
+    width: 200px;
+    background-image: url("nature.png");
+    background-size: cover;
+    color: white;
+    border: 2px solid black;
+    top: 25px;
+    position: fixed;
+    right: 0;
+}
+
