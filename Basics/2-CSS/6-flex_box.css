@@ -3,13 +3,229 @@
     margin: 0;
 }
 
+body {
+    text-align: center;
+}
 
+/*  display property : flex
+    flex direction : row/row-reverse/column/column-reverse
+    flex properties:
+        i) justify-content : flex-start/flex-end/centre/space-evenly (along main axis)
+        ii) flex-wrap : nowrap/wrap/wrap-reverse
+        iii) align-items : alignment along the cross axis
+        iv) align-content : alignment space between & around the content 
+*/
 
-#box1, #box2, #box3, #box4, #box5 {
+#box1, #box2, #box3, #box4, #box5, #container1,#container2,#container3,#container4 {
     height: 100px;
-    width: 100px;
-    border: 1px solid black;
+    width: 100px; /* the boxes remains inside the container until there width exceeds. */
+    border: 2px solid black;
     display: inline-block;
-    position: relative;
-    left: 400px;
+} 
+
+#container1 {
+    height: 200px;
+    width: 800px;
+    display: flex; /* Moves all elemnts of div from left to right order */
+    flex-direction: row; /* Default direction of flex */
+}
+
+#box1 {
+    background-color: antiquewhite;
+}
+
+#box2 {
+    background-color: cadetblue;
+}
+
+#box3 {
+    background-color: chocolate;
+}
+
+#box4 {
+    background-color: darkgoldenrod;
+}
+
+#box5 {
+    background-color: red;
+}
+
+#container2 {
+    height: 200px;
+    width: 800px;
+    display: flex;
+    flex-direction: row-reverse; /* Moves all elemnts of div from right to left order */
+}
+
+#container3 {
+    height: 200px;
+    width: 800px;
+    display: flex;
+    flex-direction: column; /* Moves all elements of div from top to bottom */
+}
+
+#container4 {
+    height: 200px;
+    width: 800px;
+    display: flex;
+    flex-direction: column-reverse; /* Moves all elements of div from bottom to top */
+}
+
+/* the boxes remains inside the container until there width exceeds. */
+#Box1, #Box2, #Box3, #Box4, #Box5, #container5,#container6,#container7 {
+    height: 100px;
+    width: 500px;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+#Box1 {
+    background-color: mistyrose;
+}
+
+#Box2 {
+    background-color: mediumaquamarine;
+}
+
+#Box3 {
+    background-color: darkblue;
+}
+
+#Box4 {
+    background-color: antiquewhite;
+}
+
+#Box5 {
+    background-color: crimson;
+}
+
+#container5 {
+    height: 200px;
+    width: 800px;
+    display: flex;
+}
+
+/* Flex properties */
+
+#Box-1, #Box-2, #Box-3, #Box-4, #Box-5, 
+#container6,#container7,#container8,#container9,#container10,#container11,
+#container12,#container13,#container14,#container15,#container16,#container17 {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#Box-1 {
+    background-color: mediumspringgreen;
+}
+
+#Box-2 {
+    background-color: mediumslateblue;
+}
+
+#Box-3 {
+    background-color: mediumvioletred;
+}
+
+#Box-4 {
+    background-color: mediumpurple;
+}
+
+#Box-5 {
+    background-color: darkcyan;
+}
+
+#container6 {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: flex-start; /* starts from main axis (left to right) */
+}
+
+#container7 {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: flex-end; /* starts from  end of the main axis (right to left) */
+}
+
+#container8 {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: center; /* all boxes moves to center of the container */
+}
+
+#container9 {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around; /* this between each box that is double the space of end boxs */
+}
+
+#container10 {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between; /* this provides space between each box in the container */
+}
+
+#container11 {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly; /* spreads the spaces evenly between the boxes */
+}
+
+#Box-1,#Box-2, #Box-3, #Box-4, #Box-5 {
+    height: 20px;
+}
+
+#container12 {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+#container13 {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+#container14 {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+#container15 {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+#container16 {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  
+}
+
+#container17 {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
 }
