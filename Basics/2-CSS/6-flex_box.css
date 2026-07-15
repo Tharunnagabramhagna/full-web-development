@@ -12,9 +12,12 @@ body {
     flex properties:
         i) justify-content : flex-start/flex-end/centre/space-evenly (along main axis)
         ii) flex-wrap : nowrap/wrap/wrap-reverse
-        iii) align-items : alignment along the cross axis
+        iii) align-items : alignment along the cross axis (strech/center/start/end)
         iv) align-content : alignment space between & around the content 
+        v) align-self : alignment an individual box in a container
 */
+
+/* flex direction + display properties */
 
 #box1, #box2, #box3, #box4, #box5, #container1,#container2,#container3,#container4 {
     height: 100px;
@@ -106,6 +109,8 @@ body {
 }
 
 /* Flex properties */
+
+/* justify-content */
 
 #Box-1, #Box-2, #Box-3, #Box-4, #Box-5, 
 #container6,#container7,#container8,#container9,#container10,#container11,
@@ -228,4 +233,373 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; 
+}
+
+/* Flex Wrap */
+
+#red,#green,#blue,#container18,#container19,#container20 {
+    color: white;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#red {
+    background-color: orangered;
+}
+
+#green {
+    background-color: yellowgreen;
+}
+
+#blue {
+    background-color: steelblue;
+}
+
+/* The boxes try to compose in less width size */
+#container18 {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-wrap: nowrap; /* Default Value of flex properties */
+}
+
+#container19 {
+    height: 250px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap; /* flex items divides in multiple lines for less width size */
+}
+
+#container20 {
+    height: 250px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap-reverse; /* flex items divides like wrap but in reverse order */
+}
+
+/* align-items */
+
+.red, .green, .blue,#container21,#container22,#container23,#container24,
+#container25 {
+    height: auto;
+    display: inline-block;
+    border: 2px solid black;
+    color: white;
+}
+
+.red {
+    background-color: orangered;
+}
+
+.green {
+    background-color: yellowgreen;
+}
+
+.blue {
+    background-color: steelblue;
+}
+
+#container21 {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    /* condition to expand => set height of flex items to auto */
+    /* it expands with respect to cross axis */
+    align-items: normal; /* flex items expands for the whole width */
+}
+
+.red,.green,.blue {
+    height: 100px;
+    width: 100px;
+}
+
+#container22 {
+    height: 300px;
+    width: 500px;
+    display: flex;
+    align-items: center; /* flex items are brought to center */
+}
+
+#container23 {
+    height: 200px;
+    width: 600px;
+    display: flex;
+    align-items: start; /* flex items aligns at the start of the container */
+}
+
+#container24 {
+    height: 200px;
+    width: 600px;
+    display: flex;
+    align-items: end; /* flex items aligns at the end of the container */
+}
+
+#container25 {
+    height: 200px;
+    width: 600px;
+    display: flex;
+    /* flex items are arranged from the start of the 
+    conatainer with respect to cross axis */
+    align-items: baseline;
+}
+
+/* align-content (works only with wrap property) */
+
+.box {
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+#BOX1 {
+    background-color: olivedrab;
+}
+
+#BOX2 {
+    background-color: slateblue;
+}
+
+#BOX3 {
+    background-color: yellow;
+}
+
+#BOX4 {
+    background-color: wheat;
+}
+
+#BOX5 {
+    background-color: aquamarine;
+}
+
+#BOX6 {
+    background-color: lawngreen;
+}
+
+#container26 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    display: flex;
+    flex-wrap: wrap;
+    /* it expands with respect to cross axis */
+    align-content: stretch; /* (or) normal (Default value) */
+}
+
+#container27 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start; /* (or) start (aligns flex items to start of the container) */
+}
+
+#container28 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end; /* (or) end (aligns flex items to end of the container) */
+}
+
+#container29 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around; /* aligns space around the flex items */
+}
+
+#container30 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly; /* aligns space evenly to the flex items */
+}
+
+#container31 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between; /* aligns space between the flex items */
+}
+
+#container32 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    display: flex;
+    /* gap properties for row and column */
+    row-gap: 1em; /* (or) 16px (or) 8% */
+    column-gap: 1em; /* (or) 16px (or) 8% */
+    flex-wrap: wrap;
+    align-content: center; /* align flex items to the center of the container */
+}
+
+#container33 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-content: flex-start; /* align to end of container in reverse order */
+}
+
+#container34 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-content: flex-end; /*  align to start of container in reverse order */
+}
+
+.box1 {
+    height: auto;
+    width: auto;
+    border-radius: 15px;
+}
+
+#onebox {
+    background-color: yellowgreen;
+}
+
+#twobox {
+    background-color: brown;
+}
+
+#threebox {
+    background-color: cadetblue;
+}
+
+#container35 {
+    height: 120px;
+    width: 300px;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* it happens through cross-axis */
+    align-content: first baseline; /* align flex items of different sizes normally */
+}
+
+#container36 {
+    height: 120px;
+    width: 300px;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: end baseline; /* align flex items of different sizes to identical sizes */
+}
+
+/* align-self */
+
+.num {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    border: 2px solid;
+    display: inline-block;
+}
+
+#one1,#one2,#one3,#one4,#one5 {
+    background-color: crimson;
+}
+
+#two,#two1,#two2 {
+    background-color: lightcoral;
+}
+
+#three {
+    background-color: darkred;
+}
+
+#one1 {
+    align-self: auto; /* & flex-start (or) self-start (Default values) */
+}
+
+#container37 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid;
+    display: flex;
+}
+
+#one2 {
+    align-self: stretch; /* it expands with respect to cross axis */  
+}
+
+#container38 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid;
+    display: flex;
+}
+
+#one3 {
+    align-self: flex-end; /* (or) self-end  (it aligns at the end of the container) */  
+}
+
+#container39 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid;
+    display: flex;
+}
+
+#one4 {
+    align-self: center; /* it aligns to the center of the container */  
+}
+
+#container40 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid;
+    display: flex;
+}
+
+#one5 {
+    /* it aligns from the start of the container with respect to cross axis */
+    align-self: baseline;  
+}
+
+#container41 {
+    height: 200px;
+    width: 300px;
+    border: 2px solid;
+    display: flex;
+}
+
+/* order property */
+
+#two1 {
+    order: 1; /* it takes the flex item to end of the items */
+}
+
+#container42 {
+    height: 120px;
+    width: 350px;
+    border: 2px solid;
+    display: flex;
+}
+
+#two2 {
+    order: -1; /* it takes the flex item to start of the items */
+}
+
+#container43 {
+    height: 120px;
+    width: 350px;
+    border: 2px solid;
+    display: flex;
 }
