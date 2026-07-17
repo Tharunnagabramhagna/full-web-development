@@ -1,0 +1,91 @@
+/* 
+    Transition : transition property / transition-duration 
+                    / transition-timing-function / transition-delay
+    Transition shorthand : property name | duration | timimg-function | delay
+*/
+
+#div1 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    background-color: darkseagreen;
+    transition-property: all; /* applies transition to all properties */
+    transition-duration: 2s; /* (or) 2000ms (hover on box to see the transition) */
+    /* transition happens in steps */
+    transition-timing-function: steps(5); /* steps(req_num) & steps => Default Value */
+}
+
+#div1:hover { /* Hover on box in the broswer to see the changes */
+    color: white;
+    background-color: orange;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: 25px;
+}
+
+#div1:active { /* click and hold the mouse on box to see the effect */
+    background-color: brown;
+}
+
+#div2 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: aqua;
+    transition-property: all;
+    transition-duration: 2s;
+    /* transition moves softly */
+    transition-timing-function: ease-in; /* similarly try => ease-out, ease-in-out */
+}
+
+#div2:hover {
+    color: whitesmoke;
+    background-color: navy;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 18px;
+}
+
+#div2:active {
+    background-color: khaki;
+}
+
+#div3 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: yellow;
+    transition-property: all;
+    transition-duration: 2s;
+    /* transition moves linearly */
+    transition-timing-function: linear;
+    transition-delay: 1s; /* 1000ms (or) (transition happens with reuired delay after hoving) */
+}
+
+#div3:hover {
+    color: navajowhite;
+    background-color: firebrick;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+#div3:active {
+    background-color: darkgoldenrod;
+}
+
+#div4 {
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
+    background-color: orangered;
+    transition: all 2s ease 1s; /* shorthand */
+}
+
+#div4:hover {
+    color: ivory;
+    background-color: maroon;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 20px;
+}

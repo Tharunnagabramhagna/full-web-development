@@ -10,11 +10,13 @@ body {
 /*  display property : flex
     flex direction : row/row-reverse/column/column-reverse
     flex properties:
-        i) justify-content : flex-start/flex-end/centre/space-evenly (along main axis)
+        i) justify-content : flex-start/flex-end/center/space-evenly (along main axis)
         ii) flex-wrap : nowrap/wrap/wrap-reverse
         iii) align-items : alignment along the cross axis (strech/center/start/end)
         iv) align-content : alignment space between & around the content 
-        v) align-self : alignment an individual box in a container
+        v) align-self : alignment of individual along the cross axis 
+        vi) Media Queries : They are used to set width based conditions
+            e.g. setting website look for different devices
 */
 
 /* flex direction + display properties */
@@ -602,4 +604,297 @@ body {
     width: 350px;
     border: 2px solid;
     display: flex;
+}
+
+/* All in one example */
+
+.Box {
+    height: 100px;
+    width: 200px;
+    border: 2px solid;
+    display: inline-block;
+}
+
+#One {
+    background-color: darkmagenta;
+}
+
+#Two {
+    background-color: darkcyan;
+    height: 200px;
+}
+
+#Three {
+    background-color: darkgoldenrod;
+    height: 80px;
+}
+
+#Four {
+    background-color: darkkhaki;
+}
+
+#Five {
+    background-color: darkslategray;
+}
+
+/* comment and check one by one for clear understanding */
+#container44 {
+    height: 500px;
+    width: 700px;
+    display: flex;
+    border: 1px solid;
+    flex-direction: row; /* Default value */
+    flex-wrap: wrap; /* wraps boxes as we have less width */
+    justify-content: center; /* bring the boxes to center-top of flex box */
+    align-items: center; /* alignment the uneven boxes */
+    align-content: center; /* bring the boxes exactly to the center of flex box */
+}
+
+/* flex-grow and shrink */
+
+.Box1 {
+    height: 100px;
+    width: 200px;
+    border: 2px solid;
+    display: inline-block;
+}
+
+#One1 {
+    background-color: darkorange;
+    height: 130px;
+    flex-shrink: 0.5; /* shrink only half than other boxes */
+}
+
+#Two2 {
+    background-color: deeppink;
+    flex-shrink: 1; /* Default value */
+}
+
+#Three3 {
+    background-color: cornflowerblue;
+    height: 150px;
+    flex-shrink: 2; /* shrinks 2 times more than other boxes */
+}
+
+#Four4 {
+    background-color: darkturquoise;
+    flex-shrink: 0; /* It won't shrink */
+}
+
+#Five5 {
+    background-color: lightsalmon;
+}
+
+#container45 {
+    height: 200px;
+    width: 800px;
+    display: flex;
+    border: 2px solid;
+}
+
+/* .Box1 {
+    width: 100px;
+} */
+
+#One11 {
+    width: 100px;
+    flex-grow: 2; /* grows double the other boxes */
+    background-color: darkorange;
+}
+
+#Two22 {
+    width: 100px;
+    flex-grow: 0.5; /* grows half times less than all the other boxes */
+    background-color: lightsalmon;
+}
+
+#Three33 {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    flex-grow: 1; /* grows one time more than all the other boxes */
+}
+
+#Four44, #Five55 {
+    height: 110px;
+    width: 100px;
+    background-color: brown;
+    flex-grow: 0; /* it won't grow */
+}
+
+#Five55 {
+    background-color: cadetblue;
+}
+
+#container46 {
+    height: 200px;
+    width: 900px;
+    display: flex;
+    border: 2px solid;
+}
+
+/* Practice Question - 6
+    1Q) Create a navbar with 4 options in the form of anchor tags inside list items.
+        Now, use flexbox to place them all spaced equally in a single line.
+    2Q) Use flexbox to center one div inside another div.
+    3Q) Which has higher priority - align-items or align-self?
+*/
+
+/* 1Q) */
+
+.anchor {
+    text-decoration: none;
+    color: white;
+    background-color: navy;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: cornsilk;
+}
+
+/* 2Q) */
+
+#ContainerDiv {
+    height: 300px;
+    width: 300px;
+    border: 2px solid;
+    display: flex;
+    background-color: beige;
+    justify-content: center;
+    align-items: center;
+}
+
+#smallContainer {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: bisque;
+}
+
+/* 3Q) */
+
+.pBox {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+#pBox1 {
+    background-color: dodgerblue;
+}
+
+#pBox2 {
+    background-color: gainsboro;
+}
+
+#pBox3 {
+    background-color: yellowgreen;
+}
+
+#pBox4 {
+    background-color: darkred;
+}
+
+#pBox5 {
+    background-color: goldenrod;
+    height: 160px;
+    align-self: flex-end; /* This has higher priority */
+}
+
+#containerPrior {
+    height: 300px;
+    width: 600px;
+    display: flex;
+    border: 2px solid;
+    row-gap: 2%;
+    column-gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+
+#div1 {
+    height: 100px;
+    width: 100px;
+    background-color: olivedrab;
+    border: 2px solid;
+}
+
+/* move your inspect console to see the changes */
+@media(width: 600px) {
+    #div1 {
+        background-color: orange;
+    }
+}
+
+/* min-width : allows all values that are greater than or equal to given width (e.g.700px) */
+@media(min-width: 700px) {
+    #div1 {
+        background-color: red;
+    }
+} 
+
+/* min-width : allows all values that are less than or equal to given width (e.g.200px) */
+@media(max-width : 200px) {
+    #div1 {
+        color: darkblue;
+    }
+}
+
+/* range of width syntax : (min-width: value) and (max-width: value) */
+@media(min-width: 200px) and (max-width: 400px) {
+    #div1 {
+        background-color: mediumvioletred;
+    }
+}
+
+/* Practice Question-7
+    Add a media query to implement the following:
+        i) the color of div changes to green for viewport width less than 300px.
+        ii) the color of div changes to pink for width between 300px & 400px.
+        iii) the color of div changes to red for width between 400px & 600px.
+        iv) the color of div changes to blue for width above 600px.
+*/
+
+#div2 {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: mediumpurple;
+    text-align: center;
+}
+
+@media(max-width:300px) {
+    #div2 {
+        background-color: green;
+    }
+}
+
+@media(min-width: 300px) and (max-width: 400px) {
+    #div2 {
+        background-color: pink;
+    }
+}
+
+@media(min-width: 400px) and (max-width: 600px) {
+    #div2 {
+        background-color: red;
+    }
+}
+
+@media(min-width: 600px) {
+    #div2 {
+        /* This will become the default color on the broswer */
+        background-color: blue;
+    }
 }
