@@ -2,7 +2,15 @@
     Transition : transition property / transition-duration 
                     / transition-timing-function / transition-delay
     Transition shorthand : property name | duration | timimg-function | delay
+    Transforms : Used to apply 2D & 3D transformation to an element
+            rotate : it rotates an element based on axis and degree
+                e.g. rotate(45deg), rotateX(60deg), rotateY(20deg), rotateZ(30deg) 
+            scale : It changes height and width of div
+            translate : It changes the position of the div
+            skew : It stretchs the object from concers
 */
+
+/* Transitions */
 
 #div1 {
     height: 200px;
@@ -89,3 +97,230 @@
     border: 2px solid black;
     font-size: 20px;
 }
+
+/* Transforms */
+
+#div5 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: coral;
+    position: absolute;
+    top:1000px;
+    left: 550px;
+    /* Even the text inside the div rotates along with box */
+    transform: rotate(45deg);
+}
+
+#div6 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 1100px;
+    left: 570px;
+    transform: rotate(90deg);
+}
+
+#div7 {
+    height: 100px;
+    width: 100px;
+    background-color: firebrick;
+    border: 2px solid;
+    position: absolute;
+    top: 1090px;
+    left: 470px;
+    transform: rotate(340deg);
+}
+
+#div8 {
+    height: 100px;
+    width: 100px;
+    background-color: darkslategray;
+    border: 2px solid;
+    position: absolute;
+    top: 1300px;
+    left: 550px;
+    transition: all 2s linear;
+}
+
+#div8:hover {
+    /* in 3D, x-axis lies on bottom of the objects so if we try to rotate x-axis
+        then it moves downwards direction. */
+    rotate: x 180deg; /* inverted (observation : at 90 deg => straight bend downwards */
+}
+
+#div9 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: indigo;
+    position: absolute;
+    top: 1450px;
+    left: 550px;
+    transition: all 2s ease-in-out;
+}
+
+#div9:hover {
+   /* y-axis lies on the body of the objects facing towards top and it rotates sideways */
+    rotate: y 180deg; /* observation: at 90 deg => straight bend sideways */
+}
+
+#div10 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: indianred;
+    position: absolute;
+    top: 1600px;
+    left: 550px;
+    transition: all 5s ease-in-out;
+}
+
+#div10:hover {
+    rotate: z 90deg; /* rotates same as 2D */
+}
+
+#div11 {
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+    border: 2px solid;
+    transition: all 1s ease-in;
+    position: absolute;
+    top: 1800px;
+    left: 300px;
+}
+
+#div11:hover {
+    /* you can write something like scale(2.5) too */
+    transform: scale(2); /* (or) scale(0.5) => becomes small & scale(1) => normal */
+}
+
+#div12 {
+    height: 130px;
+    width: 130px;
+    color: white;
+    background-color: darkblue;
+    border-radius: 15px;
+    position: absolute;
+    top: 2000px;
+    left: 300px;
+    transition: all 2s ease-in 1ms;
+}
+
+#div12:hover {
+    transform: scale(1,3); /* (height,width) */
+}
+
+#div13 {
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
+    background-color: mediumspringgreen;
+    position: absolute;
+    top: 2200px;
+    left: 300px;
+    transition: all 2s linear;
+}
+
+#div13:hover {
+    transform: scale(2,1);
+}
+
+#div14 {
+    height: 100px;
+    width: 100px;
+    background-color: blanchedalmond;
+    border: 2px solid;
+    position: absolute;
+    top: 2400px;
+    left: 300px;
+    transition: all 2s ease-in-out;
+}
+
+#div14:hover {
+    transform: scaleX(2); /* height => scaleX(val) */
+}
+
+#div15 {
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+    border: 2px solid;
+    position: absolute;
+    top: 2550px;
+    left: 300px;
+    transition: all 2s ease-out;
+}
+
+#div15:hover {
+    transform: scaleY(2); /* width => scaleY(val) */
+}
+
+#div16 {
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+    border: 2px solid;
+    transition: all 1s ease-in;
+    position: absolute;
+    top: 2700px;
+    left: 220px;
+}
+
+#div16:hover {
+    /* moves right and bottom */
+    /* translate(20px) => same size for both */
+    transform: translate(80px,20px); /* (or) (-80px,-20px) => moves left and top */
+}
+
+#div17 {
+    height: 130px;
+    width: 130px;
+    color: white;
+    background-color: darkblue;
+    border-radius: 15px;
+    position: absolute;
+    top: 2900px;
+    left: 300px;
+    transition: all 2s ease-in 1ms;
+}
+
+#div17:hover {
+    transform: translateX(200px); /* moves right ; translateX(-200px) => moves left */
+}
+
+#div18 {
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
+    background-color: mediumspringgreen;
+    position: absolute;
+    top: 3100px;
+    left: 300px;
+    transition: all 2s linear;
+}
+
+#div18:hover {
+    transform: translateY(-200px); /* moves bottom ; translateY(-200px) => moves top */
+}
+
+#div19 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: aquamarine;
+    position: absolute;
+    top: 3300px;
+    left: 500px;
+    transition: all 2s ease-in;
+}
+
+#div19:hover {
+    /* skewX(val) => streches from X-axis corner */
+    /* skewY(val) => streches from Y-axis corner */
+    transform: skew(45deg); /* (or) 30 deg (It behaves weird at 90deg) */
+}
+
