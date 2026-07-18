@@ -8,6 +8,9 @@
             scale : It changes height and width of div
             translate : It changes the position of the div
             skew : It stretchs the object from concers
+    Animation properties : animation-name / animation-duration /  animation-timing-function
+                            /  animation-delay /  animation-iteration-count /
+                             animation-direction
 */
 
 /* Transitions */
@@ -324,3 +327,191 @@
     transform: skew(45deg); /* (or) 30 deg (It behaves weird at 90deg) */
 }
 
+/* Animation Properties */
+
+#anime {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 3450px;
+    left: 550px;
+}
+
+#Div1 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: brown;
+    border: 2px solid;
+    position: absolute;
+    top: 3600px;
+    left: 550px;
+    animation-name: colorAnimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 10;
+}
+
+@keyframes colorAnimate {
+    from {background-color: brown;}
+    to {background-color: mediumslateblue;}
+}
+
+#Disco {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: orangered;
+    position: absolute;
+    top: 3800px;
+    left: 550px;
+    text-align: center;
+    animation-name: discoLight;
+    animation-duration: 0.25s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes discoLight {
+    from {background-color: orangered;}
+    to {background-color: greenyellow;}
+}
+
+#Div2 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: yellowgreen;
+    position: absolute;
+    top: 4100px;
+    left: 550px;
+    animation-name: moveAnimation1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal; /* Default value */
+}
+
+@keyframes moveAnimation1 {
+    from {left: 0px;}
+    to {left: 600px;}
+}
+
+#Div3 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: darkred;
+    position: absolute;
+    top: 4300px;
+    left: 550px;
+    animation-name: moveAnimation2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse; /* move in opp direction */
+}
+
+@keyframes moveAnimation2 {
+    from {left: 0px;}
+    to {left: 700px;}
+}
+
+#Div4 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: darkorange;
+    position: absolute;
+    top: 4500px;
+    left: 550px;
+    animation-name: moveAnimation3;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes moveAnimation3 {
+    from {left: 0px;}
+    to {left: 400px;}
+}
+
+#Div5 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: darkkhaki;
+    position: absolute;
+    top: 4700px;
+    left: 550px;
+    animation-name: moveAnimation4;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes moveAnimation4 {
+    from {left: 0px;}
+    to {left: 800px;}
+}
+
+#Div6 {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: darkseagreen;
+    position: absolute;
+    top: 4900px;
+    left: 550px;
+    /* animation shorthand : 
+        syntax => animation : name duration timimg-function iteration-count direction
+    */
+    animation: moveAnimation5 5s ease-in-out 0s infinite normal;
+}
+
+@keyframes moveAnimation5 {
+    0% { /* 0% completed */
+        left: 0px;
+        background-color: lightgreen;
+    }
+    50% {
+        background-color: mediumseagreen;
+    }
+    100% { /* 100% completed */
+        left: 550px;
+        background-color: darkgreen;
+        color: white;
+    }
+}
+
+/* Practice Question-8
+    Create a simple loader in CSS
+    step-1 : Create a div with circular shape & thick border from one end
+             (top/bottom/left/right)
+    step-2 : To make it spin create an animation which transforms it from 0deg to 360deg
+    step-3 : Add the animation property to the loader with infinite duration
+*/
+
+#loader {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5100px;
+    left: 550px;
+    border: 10px solid #3E1929;
+    border-top: 10px solid #B0DAF1;
+    animation: spinAnimation 1s ease-in-out 0s infinite normal;
+}
+
+@keyframes spinAnimation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
