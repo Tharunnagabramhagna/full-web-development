@@ -1,0 +1,117 @@
+* {
+    /* first line always written by developers */
+    margin: 0;
+    padding: 0;
+    /* remaining things needed for the website */
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+
+/*** Amazon Navbar ***/
+
+.navbar {
+    height: 80px;
+    width: 1300px;
+    background-color: #131A22;
+    color: white;
+    /* To bring all the elements to same line */
+    display: flex;
+    /* To bring all the elements to the center of the navbar */
+    align-items: center;
+    /* Equal spacing for whole navbar classes */
+    justify-content: space-evenly;
+}
+
+/** Navbar Logo **/
+.nav-logo {
+    height: 50px;
+    width: 114px;
+}
+
+.logo {
+    background-image: url("amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+
+/** Navbar Address **/
+.deliver {
+    color: #CCCCCC;
+    font-size: 0.75rem;
+    /* To bring this to same line as country text */
+    margin-left: 19px;
+}
+
+.country {
+    font-size: 1rem;
+    
+}
+
+.add-icon {
+    /* To bring icon and country to same line */
+    display: flex;
+    /* it's arranges the items in same line as navbar */
+    align-items: center;
+}
+
+/** Navbar Search **/
+
+.nav-search {
+    display: flex;
+    /* creates equal space between classes of search */
+    justify-content: space-evenly;
+    background-color: white;
+    height: 40px;
+    width: 600px;
+    background-color: #febd69;
+    /* same as Amazon website */
+    border-radius: 4px;
+}
+
+.search-select {
+    color: #0F1111;
+    /* pointer displays as you hover on it */
+    cursor: pointer;
+    width: 50px;
+    background-color: #E6E6E6;
+    text-align: center;
+    /* border for only left edges => Same as amazon */
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    /* remove right edges to avoid spacing between input and select */
+    border: none;
+}
+
+.search-input {
+    /* Occupies all the remaining spaces inside the search div */
+    width: 100%;
+    /* amazon has more font size on search bar */
+    font-size: 1rem;
+    /* same reason as search-select but left edges */
+    border: none;
+}
+
+.search-icon {
+    color: #0F1111;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: scale(1.2); */
+    /* (or) */
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/**  **/
+
+/** Hover Border **/
+.border {
+    /* set transport to avoid movement of image */
+    border: 1px solid transparent;
+}
+
+.border:hover {
+    border: 1px solid white;
+}
