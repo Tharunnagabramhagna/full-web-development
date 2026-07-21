@@ -10,8 +10,8 @@
 /*** Amazon Navbar ***/
 
 .navbar {
-    height: 80px;
-    width: 1300px;
+    height: 58px;
+    width: 1280px;
     background-color: #131A22;
     color: white;
     /* To bring all the elements to same line */
@@ -26,6 +26,7 @@
 .nav-logo {
     height: 50px;
     width: 114px;
+    cursor: pointer;
 }
 
 .logo {
@@ -36,6 +37,11 @@
 }
 
 /** Navbar Address **/
+
+.nav-address {
+    cursor: pointer;
+}
+
 .deliver {
     color: #CCCCCC;
     font-size: 0.75rem;
@@ -45,7 +51,6 @@
 
 .country {
     font-size: 1rem;
-    
 }
 
 .add-icon {
@@ -63,10 +68,15 @@
     justify-content: space-evenly;
     background-color: white;
     height: 40px;
-    width: 600px;
+    width: 620px;
     background-color: #febd69;
     /* same as Amazon website */
     border-radius: 4px;
+}
+
+/* It gives the orange border around search while hover on it */
+.nav-search:hover {
+    border: 2px solid orange;
 }
 
 .search-select {
@@ -104,7 +114,52 @@
     cursor: pointer;
 }
 
-/**  **/
+/** Navbar Language **/
+
+.nav-lang i { /* styling a particular elements in class */
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nav-lang select {
+    background-color: #131A22;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/** Navbar Sign-in & Returns and Orders **/
+
+/* As sign-in style is same we copy it to the next div */
+
+.nav-signin-one,.nav-return1 {
+    margin-left: 4px;
+    font-size: 0.80rem;
+    cursor: pointer;
+}
+
+.signin-details,.nav-return2 {
+    background-color: #131A22;
+    width: auto;
+    color: white;
+    border: none;
+    font-size: 0.85rem;
+    /* To get darker font same as amazon */
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/** Navbar Cart **/
+
+.nav-cart {
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i { /* increase cart size */
+    font-size: 30px;
+}
 
 /** Hover Border **/
 .border {
@@ -114,4 +169,67 @@
 
 .border:hover {
     border: 1px solid white;
+}
+
+/*** Amazon Panel ***/
+
+.panel {
+    display: flex;
+    height: 40px;
+    width: 1280px;
+    background-color: #232f3e;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.panel-menu {
+    cursor: pointer;
+}
+
+.panel-ops {
+    width: 90%;
+}
+
+.panel a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.90rem;
+    margin-left: 12px;
+}
+
+/** Hero-Section **/
+
+.hero-section {
+    background-image: url(hero_image.png);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 1280px;
+    /* To take the msg-box to end */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-msg a {
+    text-decoration: none;
+    color: #2162A1;
+}
+
+.hero-msg a:hover {
+    text-decoration-line: underline;
+}
+
+.hero-msg {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 90%;
+    align-items: center;
+    align-content: center;
+    font-size: 0.85rem;
+    /* To bring the msg-box to center (same as amazon) */
+    margin-bottom: 310px;
 }
